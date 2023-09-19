@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shortened URL</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Shortened URL</h1>
+        <div class="url-info">
+            <p>Original URL: <a href="{{ shortened_url.original_url }}">{{ shortened_url.original_url }}</a></p>
+            <p>Shortened URL: <a href="{{ shortened_url.short_code }}">{{ shortened_url.short_code }}</a></p>
+        </div>
+        <a href="{% url 'shorten_url' %}" class="back-button">Short another url</a>
+    </div>
+</body>
+<style>
+    /* static/shortener/styles.css */
+/* static/shortener/styles.css */
+
+/* ... (other CSS styles) ... */
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Add margin to separate the button from the content above */
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px; /* Add padding to the button */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 80px;
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.url-info {
+    padding: 20px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</html>
